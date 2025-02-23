@@ -14,10 +14,15 @@
 body {
     margin: 0;
     background: #1C1C1C;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Inter;
+}
+
+label {
+    font-size: 25px;
 }
 
 .app {
@@ -60,6 +65,11 @@ body {
     margin: 20px 0 90px 0;
 }
 
+.generate-section {
+    display: flex;
+    justify-content: space-between;
+}
+
 .generate-btn {
     background: #10B981;
     color: #fff;
@@ -76,6 +86,12 @@ body {
     cursor: pointer;
 }
 
+.generate-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
 
 .passwords {
     display: flex;
@@ -100,4 +116,96 @@ body {
     font-size: 24px;
     cursor: pointer;
     cursor: url("./images/copy.png"), auto;
+}
+
+/* checkbox styling */
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    font-size: 22px;
+    width: 100%;
+}
+
+/* Hide default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom checkbox */
+.checkmark {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+    position: relative;
+    margin-left: 95px;
+}
+
+/* Hover effect */
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* Checked state */
+.checkbox-container input:checked~.checkmark {
+    background-color: #10B981;
+}
+
+/* Checkmark styling */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* input number styling */
+
+/* Number input container */
+.number-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Styled number input (keeps default arrows) */
+.number-container input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    font-size: 18px;
+    border: 2px solid #eee;
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover & focus effects */
+.number-container input[type="number"]:hover,
+.number-container input[type="number"]:focus {
+    border-color: #10B981;
 }

@@ -92,18 +92,32 @@ const characters = [
   "/",
 ];
 
-password1El = document.getElementById("password-1");
-password2El = document.getElementById("password-2");
+let password1El = document.getElementById("password-1");
+let password2El = document.getElementById("password-2");
+let passwordLengthEl = document.getElementById("password-length");
+let includeSymbolsEl = document.getElementById("include-symbols");
 
 function generate() {
   let password1 = "";
   let password2 = "";
-  for (let i = 0; i < 15; i++) {
-    let randomNumber = Math.floor(Math.random() * 91);
+  let passwordLength = passwordLengthEl.value;
+  let toIndex = 61;
+  if (includeSymbolsEl.checked) {
+    toIndex = 91;
+  }
+
+  if (passwordLength > 50) {
+    passwordLength = 50;
+  } else if (passwordLength < 4) {
+    passwordLength = 4;
+  }
+
+  for (let i = 0; i < passwordLength; i++) {
+    let randomNumber = Math.floor(Math.random() * toIndex);
     password1 += characters[randomNumber];
   }
-  for (let i = 0; i < 15; i++) {
-    let randomNumber = Math.floor(Math.random() * 91);
+  for (let i = 0; i < passwordLength; i++) {
+    let randomNumber = Math.floor(Math.random() * toIndex);
     password2 += characters[randomNumber];
   }
   password1El.innerText = password1;

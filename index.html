@@ -10,7 +10,27 @@
             <h1 class="title-1">Generate a</h1>
             <h1 class="title-2">random password</h1>
             <p class="description">Never use an insecure password again.</p>
-            <button class="generate-btn" onclick="generate()">Generate passwords</button>
+
+            <div class="generate-section">
+
+                <button class="generate-btn" onclick="generate()">Generate passwords</button>
+
+                <div class="generate-options">
+                    <div class="option">
+                        <label class="number-container">Password Length:
+                            <input type="number" id="password-length" min="4" max="50" value="16" />
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label class="checkbox-container">Include symbols:
+                            <input type="checkbox" id="include-symbols" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
         <div class="passwords">
             <div id="password-1" class="password"></div>
