@@ -89,4 +89,15 @@ body {
     width: 320px;
     height: 65px;
     border-radius: 6px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 35px;
+}
+
+.password:hover {
+    color: #0ea06f;
+    font-size: 24px;
+    cursor: pointer;
+    cursor: url("./images/copy.png"), auto;
 }
