@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Karla;
+    src: url("./fonts/Karla.ttf");
+
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("./fonts/Inter.ttf");
+
+}
+
+
+body {
+    margin: 0;
+    background: #1C1C1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+}
+
+.app {
+    background: #1F2937;
+    width: 720px;
+    height: 70%;
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main {
+    border-bottom: 1px solid #2F3E53;
+}
+
+.title-1,
+.title-2 {
+    font-family: Karla;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -2.5%;
+    margin: 0 0 5px 0;
+}
+
+.title-1 {
+    color: #fff;
+}
+
+.title-2 {
+    color: #10B981;
+}
+
+.description {
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 20px 0 90px 0;
+}
+
+.generate-btn {
+    background: #10B981;
+    color: #fff;
+    padding: 20px 18px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    border: 0;
+    border-radius: 6px;
+    margin-bottom: 50px;
+}
+
+.generate-btn:hover {
+    background: #0ea06f;
+    cursor: pointer;
+}
+
+
+.passwords {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.password {
+    background: #273549;
+    color: #10B981;
+    width: 320px;
+    height: 65px;
+    border-radius: 6px;
+}
